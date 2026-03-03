@@ -44,13 +44,3 @@ let prompt =
   poemElement.innerHTML = `<div class="generating">⏳ Generating a Persian poem about ${instructionsInput.value}</div>`;
 
 
-  document.addEventListener("click", function () {
-    document.getElementById("bg-music").play();
-  }, { once: true });
-
-
-  axios.get(apiURL).then(displayPoem);
-}
-
-let poemFormElement = document.querySelector("#poem-generator-form");
-poemFormElement.addEventListener("submit", generatePoem);
