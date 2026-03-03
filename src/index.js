@@ -38,15 +38,16 @@ let prompt =
   `<div style="text-align:left; direction:ltr;"><strong>Zakia's AI Generator</strong></div>` +
   `Return only these div elements and nothing else.`;
   
-
-  
-  
-  
-  
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
   let poemElement = document.querySelector("#poem");
   poemElement.classList.remove("hidden");
   poemElement.innerHTML = `<div class="generating">⏳ Generating a Persian poem about ${instructionsInput.value}</div>`;
+
+
+  document.addEventListener("click", function () {
+    document.getElementById("bg-music").play();
+  }, { once: true });
+
 
   axios.get(apiURL).then(displayPoem);
 }
