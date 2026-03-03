@@ -20,6 +20,7 @@ body {
   background-position: left center;
   background-size: contain;
   pointer-events: none;
+   box-shadow: 8px 0 20px rgba(0, 0, 0, 0.2);
 }
 
 a {
